@@ -1,3 +1,4 @@
-# 💣Mine Sweeper💣
-The same old & popular familiar game with some twists 😉
-![WhatsApp Image 2023-09-17 at 20 48 04](https://github.com/OriTeicher/MineSweeper/assets/101281765/042b8ca0-6060-4861-a573-253c9cd5ab45)
+# 💣 Mine Sweeper 💣
+<h1> Mine sweeper game with vanilla js and </h1>
+<h2> and very cool surprises!</h2>
+![image](https://github.com/OriTeicher/MineSweeper/assets/101281765/2a08497a-b991-42d7-9bb2-c4a71a892a40)

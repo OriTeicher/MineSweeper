@@ -1,0 +1,5 @@
+.dark-mode {
+    background: none;
+    background: linear-gradient(black, #333, gray);
+    color: rgb(255, 255, 255);
+}

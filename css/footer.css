@@ -1,0 +1,28 @@
+footer {
+    display: flex;
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    flex-direction: row;
+    background: linear-gradient(to right, #1d7cdb25, #19b668a4);
+    text-align: center;
+    align-items: end;
+    justify-content: space-between;
+}
+
+footer .credits {
+    font-size: 20px;
+}
+
+
+.bottom-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-shadow: 1px 1px black;
+    width: 100%;
+    font-size: 25px;
+    margin-inline-end: 10px;
+}

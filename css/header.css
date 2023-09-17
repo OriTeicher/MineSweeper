@@ -1,0 +1,38 @@
+header {
+    z-index: 500;
+    position: fixed;
+    margin-inline-start: 15px;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #1d7cdb25, #19b668a4);
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.logo {
+    font-family: monospace;
+    margin-block-end: 7px;
+    font-weight: 900;
+    text-shadow: 1px 1px 1px black;
+    border-radius: 10px;
+}
+
+.logo:hover {
+    color: #FF822D;
+    cursor: pointer;
+}
+
+
+
+.lives {
+    font-size: 25px;
+    text-shadow: 1px 1px 1px black;
+    margin-inline-end: 15px;
+    margin-block-end: 3.5px;
+}
+
+.lives span {
+    text-shadow: 3px 1px rgb(0, 0, 0);
+}

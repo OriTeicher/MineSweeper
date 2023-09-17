@@ -1,0 +1,45 @@
+input[type="radio"] {
+    border: none;
+    outline: none;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked+label {
+    font-weight: bold;
+    color: rgb(7, 255, 110);
+}
+
+label {
+    font-size: 15px;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
+}
+
+.space-around {
+    justify-content: space-around;
+}

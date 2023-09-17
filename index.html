@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine Sweeper Game</title>
+    <link rel="icon" type="image/png" href="./img/mine.png" sizes="16x16">
+    <link rel="stylesheet" href="css/_global.css">
+</head>
+
+
+<body onload="onInit()">
+    <div class="app-container mode">
+        <header>
+            <h1 class='logo' onclick="resetGame()">Mine💣Sweeper</h1>
+            <div class="lives"><span></span></div>
+        </header>
+        <div class="board-container">
+            <section class="top-container">
+                <div class="score flex">Score: <span></span></div>
+                <div class="top-btns">
+                    <button class="reset-btn undo-btn" onclick="undoMove()" title="Undo move"><img
+                            src="img/undo.jpg"></button>
+                    <button class="reset-btn smile" onclick="resetGame()"></button>
+                    <button class="reset-btn set-btn" onclick="setMinesManually()"><img src="img/setmines.png"></button>
+                </div>
+                <div class="timer">00:00:00</div>
+            </section>
+            <section class="center-container flex">
+                <section class="left-board-section">
+                    <div class="hints-btns-container">
+                        <button class="hint-btn mine-hint" onclick="getHint()"
+                            title="Shows a mine"><span></span></button>
+                        <button class="hint-btn" onclick="blowUpMines()"
+                            title="blow 3 mines, can only use after the first click">👽</button>
+                        <button class="hint-btn" onclick="toggleDarkMode()" title="Change to dark\light mode"><i
+                                class="fa-solid fa-circle-half-stroke"></i></button>
+                        <button class="hint-btn safe-click" onclick="getSafeClick()"
+                            title="Shows a safe cell"><span></span></button>
+
+                        <button class="hint-btn" onclick="getMegaHint()" title="Mark cells from left to right to see mines
+                                           ">🔎</button>
+                        <button class="hint-btn safe-click" onclick="" title="Game info"><i
+                                class="fa-solid fa-circle-info" style="color: #ffffff;"></i></button>
+
+                    </div>
+                    <form>
+                        <div class="level-container">
+                            <input type="radio" id="easy" name="mode" value="easy" onclick="setDifficulty(this)"
+                                checked>
+                            <label for="mode">Easy</label>
+                        </div>
+                        <div class="level-container">
+                            <input type="radio" id="Medium" name="mode" value="medium" onclick="setDifficulty(this)">
+                            <label for="mode">Medium</label>
+                        </div>
+                        <div class="level-container">
+                            <input type="radio" id="Extreme" name="mode" value="hard" onclick="setDifficulty(this)">
+                            <label for="mode">Hard</label>
+                        </div>
+                    </form>
+                </section>
+                <table>
+                    <tbody class="board" id="main-board">
+                </table>
+                <section class="scoreboard-container flex-col">
+                    <h3 class="leaderboards-header">Leaderboards</h3>
+                    <table class="scoreboard-table-container">
+                        <tbody class="scoreboard-table" id="sboard">
+                    </table>
+                </section>
+            </section>
+        </div>
+        <footer>
+            <div class="bottom-stats">
+                <div class="best-time" style="font-family: monospace;">Current Record -<span
+                        style="font-family: monospace;"> No score (yet.. 😉)</span>
+                </div>
+                <div class="credits" style="font-family: monospace;">by Ori Teicher</div>
+            </div>
+        </footer>
+        <div />
+
+        <div class="modal">
+            <h2>////////////////////</h2>
+        </div>
+
+        <script src="https://kit.fontawesome.com/b4ce7bf6ff.js" crossorigin="anonymous"></script>
+        <script src="js/storage.js"></script>
+        <script src="js/timer.js"></script>
+        <script src="js/hints.js"></script>
+        <script src="js/game.js"></script>
+        <script src="js/mines.js"></script>
+        <script src="js/util.js"></script>
+</body>
+
+
+</html>
