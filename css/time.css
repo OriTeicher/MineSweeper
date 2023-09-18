@@ -9,7 +9,6 @@
 
 .best-time {
     text-align: center;
-    border-radius: 20px;
     padding: 5px 10px;
     font-size: 20px;
     width: fit-content;
@@ -18,13 +17,13 @@
 }
 
 .timer {
-    background-color: #ffffff21;
-    border-radius: 20px;
+    background-color: #ffffff3a;
+    border-radius: 10px;
     width: 150px;
     padding: 5px 0px;
     font-size: 35px;
     text-shadow: 1px 1px 1px black;
     width: 250px;
 
-    outline: 3px solid rgba(255, 255, 255, 0.295);
+    outline: 3px solid rgba(255, 255, 255, 0.493);
 }

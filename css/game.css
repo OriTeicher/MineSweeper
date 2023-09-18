@@ -46,12 +46,13 @@ body {
     min-width: fit-content;
     padding: 5px 0px;
     text-shadow: 1px 1px 1px black;
-    background-color: #ffffff21;
-    border-radius: 25px;
+    background-color: #ffffff3a;
+    border-radius: 10px;
     font-size: 35px;
-    outline: 3px solid rgba(255, 255, 255, 0.295);
+    outline: 3px solid rgba(255, 255, 255, 0.493);
     width: 250px;
 }
+
 
 
 td img {
@@ -152,14 +153,15 @@ a {
 
 
 button {
-    transition: 0.1s ease-in-out scale;
+    transition: 0.3s ease-in-out scale;
 }
 
 button:hover {
-    scale: 1.1;
+    scale: 1.16;
 }
 
 .hints-btns-container {
+
     display: grid;
     justify-items: center;
     gap: 15px;
@@ -173,6 +175,7 @@ button:hover {
     border-radius: 10px;
     font-size: 1.5rem;
     padding: 10px 5px;
+
 }
 
 .hints-btns-container button:hover {

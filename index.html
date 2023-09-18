@@ -13,7 +13,7 @@
 <body onload="onInit()">
     <div class="app-container mode">
         <header>
-            <h1 class='logo' onclick="resetGame()">Mine💣Sweeper</h1>
+            <h1 class='logo' onclick="resetGame()" data-tooltip="Start New Game">Mine💣Sweeper</h1>
             <div class="lives"><span></span></div>
         </header>
         <div class="board-container">
@@ -21,8 +21,10 @@
                 <div class="top-btns">
                     <button class="reset-btn undo-btn" onclick="undoMove()" title="Undo move"><img
                             src="img/undo.jpg"></button>
-                    <button class="reset-btn smile" onclick="resetGame()"></button>
-                    <button class="reset-btn set-btn" onclick="setMinesManually()"><img src="img/setmines.png"></button>
+                    <button class="reset-btn smile" title="Start New Game" onclick="resetGame()"></button>
+                    <button class="reset-btn set-btn" onclick="setMinesManually()"
+                        title="Create board (not working when a game is on), first click to put mines and than select the cells, second click to finish building the board"><img
+                            src="img/setmines.png"></button>
                 </div>
             </section>
             <section class="center-container flex">
@@ -62,7 +64,6 @@
                     </form>
                 </section>
                 <table>
-                    <!-- max height 496 -->
                     <tbody class="board" id="main-board">
                 </table>
                 <div class="right-board-section flex-col">

@@ -1,0 +1,98 @@
+@media (max-width: 860px) {
+
+    .app-container {}
+
+    .center-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .top-btns {
+        position: absolute
+    }
+
+    .center-container button {}
+
+    input[type="radio"] {
+        width: 15px;
+    }
+
+    label {
+        font-size: 15px;
+    }
+
+    .timer,
+    .score {
+        font-size: 20px;
+    }
+
+    .scoreboard-container {
+        font-size: 20px;
+    }
+
+
+    footer {
+        display: none;
+    }
+
+    .score,
+    .timer {
+        top: 0;
+        position: fixed;
+        background: linear-gradient(lightseagreen, lightskyblue);
+        box-shadow: 1px 2px 1px black;
+        outline: none;
+        border-radius: 0px;
+        z-index: 1000;
+    }
+
+    .score {
+        left: 0;
+        width: 50vw;
+    }
+
+    .timer {
+        right: 0;
+    }
+
+    button {
+        scale: 0.9;
+    }
+
+    header {
+        display: none;
+    }
+
+    .scoreboard-container {
+        display: none;
+    }
+
+    form {
+
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        width: 0px;
+    }
+
+    .left-board-section {}
+
+    .hints-btns-container {
+        gap: 10px;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+
+    .hints-btns-container button {
+        width: 150%;
+        font-size: 30px;
+
+    }
+
+    label {
+        font-size: 20px;
+    }
+
+}

@@ -72,16 +72,19 @@
     display: flex;
     width: 250px;
     flex-direction: column;
-    justify-content: start;
-    justify-items: start;
+    justify-content: space-between;
     gap: 20px;
     height: 100%;
 }
 
 .right-board-section {
-    height: 100%;
-    gap: 20px;
+    display: flex;
+    width: 250px;
     justify-content: space-between;
+    margin-bottom: 2px;
+    gap: 20px;
+    height: 100%;
+    ;
 }
 
 
@@ -108,11 +111,4 @@ form .level-container {
 
 .level-container:last-child {
     border-bottom: none;
-}
-
-@media (max-width: 850px) {
-    .cell {
-        width: 30px;
-        height: 30px;
-    }
 }
