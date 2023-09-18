@@ -18,17 +18,17 @@
         </header>
         <div class="board-container">
             <section class="top-container">
-                <div class="score flex">Score: <span></span></div>
                 <div class="top-btns">
                     <button class="reset-btn undo-btn" onclick="undoMove()" title="Undo move"><img
                             src="img/undo.jpg"></button>
                     <button class="reset-btn smile" onclick="resetGame()"></button>
                     <button class="reset-btn set-btn" onclick="setMinesManually()"><img src="img/setmines.png"></button>
                 </div>
-                <div class="timer">00:00:00</div>
             </section>
             <section class="center-container flex">
                 <section class="left-board-section">
+                    <div class="score flex">Score: <span></span></div>
+
                     <div class="hints-btns-container">
                         <button class="hint-btn mine-hint" onclick="getHint()"
                             title="Shows a mine"><span></span></button>
@@ -62,14 +62,18 @@
                     </form>
                 </section>
                 <table>
+                    <!-- max height 496 -->
                     <tbody class="board" id="main-board">
                 </table>
-                <section class="scoreboard-container flex-col">
-                    <h3 class="leaderboards-header">Leaderboards</h3>
-                    <table class="scoreboard-table-container">
-                        <tbody class="scoreboard-table" id="sboard">
-                    </table>
-                </section>
+                <div class="right-board-section flex-col">
+                    <div class="timer">00:00:00</div>
+                    <article class="scoreboard-container flex-col">
+                        <h3 class="leaderboards-header">Leaderboards</h3>
+                        <table class="scoreboard-table-container">
+                            <tbody class="scoreboard-table" id="sboard">
+                        </table>
+                    </article>
+                </div>
             </section>
         </div>
         <footer>

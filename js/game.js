@@ -33,6 +33,7 @@ var gCurrTime
 
 // when page load start the game 
 function onInit() {
+    setDemoData()
     gIsFirstClick = true;
     gGame = getGameState()
     gBoard = buildBoard()

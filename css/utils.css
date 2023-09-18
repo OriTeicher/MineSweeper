@@ -1,8 +1,7 @@
 input[type="radio"] {
-    border: none;
-    outline: none;
-    width: 15px;
-    height: 15px;
+    opacity: 0.4;
+    width: 25px;
+    height: 25px;
     cursor: pointer;
 }
 
@@ -12,7 +11,7 @@ input[type="radio"]:checked+label {
 }
 
 label {
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .flex-col {
