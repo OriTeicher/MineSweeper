@@ -1,4 +1,4 @@
-@import './game.css';
+
 @import './header.css';
 @import './time.css';
 @import './board.css';
@@ -6,3 +6,4 @@
 @import './dark.mode.css';
 @import './scoreboard.css';
 @import './utils.css';
+@import './game.css';
