@@ -40,8 +40,8 @@
     .timer {
         top: 0;
         position: fixed;
-        background: linear-gradient(lightseagreen, lightskyblue);
-        box-shadow: 1px 2px 1px black;
+        background: lightseagreen;
+        box-shadow: 1px 1px 1px black;
         outline: none;
         border-radius: 0px;
         z-index: 1000;
@@ -95,4 +95,5 @@
         font-size: 20px;
     }
 
+    .cell {}
 }
