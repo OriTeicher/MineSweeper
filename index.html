@@ -22,9 +22,8 @@
                     <button class="reset-btn undo-btn" onclick="undoMove()" title="Undo move"><img
                             src="img/undo.jpg"></button>
                     <button class="reset-btn smile" title="Start New Game" onclick="resetGame()"></button>
-                    <button class="reset-btn set-btn" onclick="setMinesManually()"
-                        title="Create board (not working when a game is on), first click to put mines and than select the cells, second click to finish building the board"><img
-                            src="img/setmines.png"></button>
+                    <button class="reset-btn set-btn" onclick="setMinesManually()" title="Create board (not working when a game is on), first click to put mines and than select the cells, second click to finish         background-color: lightseagreen;
+                        building the board"><img src="img/setmines.png"></button>
                 </div>
             </section>
             <section class="center-container flex">
@@ -34,17 +33,17 @@
                     <div class="hints-btns-container">
                         <button class="hint-btn mine-hint" onclick="getHint()"
                             title="Shows a mine"><span></span></button>
-                        <button class="hint-btn" onclick="blowUpMines()"
-                            title="blow 3 mines, can only use after the first click">👽</button>
                         <button class="hint-btn" onclick="toggleDarkMode()" title="Change to dark\light mode"><i
                                 class="fa-solid fa-circle-half-stroke"></i></button>
                         <button class="hint-btn safe-click" onclick="getSafeClick()"
                             title="Shows a safe cell"><span></span></button>
 
                         <button class="hint-btn" onclick="getMegaHint()" title="Mark cells from left to right to see mines
-                                           ">🔎</button>
+                                ">🔎</button>
                         <button class="hint-btn safe-click" onclick="" title="Game info"><i
                                 class="fa-solid fa-circle-info" style="color: #ffffff;"></i></button>
+                        <button class="hint-btn" onclick="blowUpMines()"
+                            title="blow 3 mines, can only use after the first click">👽</button>
 
                     </div>
                     <form>
@@ -69,7 +68,7 @@
                 <div class="right-board-section">
                     <div class="timer">00:00:00</div>
                     <article class="scoreboard-container ">
-                        <h3 class="leaderboards-header">Leaderboards</h3>
+                        <h3 class="leaderboards-header">Leaderboard</h3>
                         <table class="scoreboard-table-container">
                             <tbody class="scoreboard-table" id="sboard">
                         </table>
@@ -79,7 +78,7 @@
         </div>
         <footer>
             <div class="bottom-stats">
-                <div class="best-time" style="font-family: monospace;">Current Record -<span
+                <div class="best-time" style="font-family: monospace;">Current Session Record -<span
                         style="font-family: monospace;"> No score (yet.. 😉)</span>
                 </div>
                 <div class="credits" style="font-family: monospace;">by Ori Teicher</div>
@@ -87,9 +86,14 @@
         </footer>
         <div />
 
-        <div class="modal">
-            <h2>////////////////////</h2>
+        <div class="error-modal hide">
+            <h2>Cant use at this stage of the game</h2>
         </div>
+
+        <form class="socre-modal hide">
+            <input class="name-input" type="text">
+            <button type="submit" onsubmit="saveScore()"></button>
+        </form>
 
         <script src="https://kit.fontawesome.com/b4ce7bf6ff.js" crossorigin="anonymous"></script>
         <script src="js/storage.js"></script>

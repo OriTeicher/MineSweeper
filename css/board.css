@@ -15,13 +15,13 @@
 .board-container.easy .cell {
     width: 4vw;
     height: 7.6vh;
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 .board-container.medium .cell {
     width: 3.5vw;
     height: 6.5vh;
-    font-size: 2.4em;
+    font-size: 2em;
 
 }
 

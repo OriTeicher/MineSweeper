@@ -69,12 +69,20 @@
     font-size: 20px;
     max-width: 30px;
     min-width: 30px;
+    border-right: 2px solid rgba(211, 211, 211, 0.295);
 
 }
 
+
 .scoreboard-cell.time,
 .scoreboard-cell.name {
+
     font-size: 20px;
     background-color: #ffffff21;
     width: 100%;
+}
+
+.scoreboard-cell.name {
+    border-right: 2px solid rgba(211, 211, 211, 0.295);
+
 }

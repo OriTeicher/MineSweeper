@@ -4,7 +4,7 @@ var gMegaHintsPoss = []
 
 function renderHints() {
     var elHintBtn = document.querySelector('.mine-hint span');
-    elHintBtn.innerHTML =  `${HINT} <span style="color: #fff;">${gLevel.HINTS}</span>`;
+    elHintBtn.innerHTML = `${HINT} <span style="color: #fff;">${gLevel.HINTS}</span>`;
     if (gLevel.HINTS === 0) elHintBtn.innerText = '🚫'
 }
 
@@ -80,11 +80,15 @@ function getMegaHint() {
 }
 
 function setMegaHintPos(i, j) {
+    if (gIsFirstClick) {
+        toggleErrorModal()
+        return
+    }
     gMegaHintsPoss.push({ i: i, j: j });
     if (gMegaHintsPoss.length === 2) {
         displayMegaHint()
         gIsMegaHint = false
-        return;
+        return
     }
 }
 
@@ -103,9 +107,9 @@ function displayMegaHint() {
         for (var i = gMegaHintsPoss[0].i; i <= gMegaHintsPoss[1].i; i++) {
             for (var j = gMegaHintsPoss[0].j; j <= gMegaHintsPoss[1].j; j++) {
                 var cell = gBoard[i][j]
-                var elCell = document.querySelector(`.cell-${i}-${j}`);
+                var elCell = document.querySelector(`.cell-${i}-${j}`)
                 if (cell.isMine && !cell.isShown) elCell.classList.remove('mine')
-                if (!cell.isMine) elCell.classList.remove('mega-hint');
+                if (!cell.isMine) elCell.classList.remove('mega-hint')
             }
         }
         gMegaHintsPoss = []

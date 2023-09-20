@@ -1,19 +1,20 @@
 @media (max-width:1200px) {
     .board-container table {
-        width: 400px;
-        height: 400px;
+        width: 50vw;
     }
 
-    .scoreboard-container {
-        display: none;
-    }
+
 }
 
 
-@media (max-width:840px) {
+@media (max-width:800px) {
+    .scoreboard-container {
+        display: none;
+    }
+
     .board-container table {
-        width: 400px;
-        height: 400px;
+        width: 95vw;
+        height: auto;
     }
 
     .scoreboard-container {
@@ -29,11 +30,14 @@
     .top-btns {
         position: fixed;
         top: 0;
-        transform: translateY(60%);
-        margin-top: 10px;
+        transform: translateY(77%);
         width: 100%;
-        justify-content: space-between;
-        gap: 0px;
+        justify-content: space-evenly;
+
+    }
+
+    .top-btns button:hover {
+        scale: 1;
     }
 
     .center-container {
@@ -50,15 +54,14 @@
 
     .timer,
     .score {
-        font-size: 20px;
+        background-color: lightseagreen;
         position: fixed;
         outline: none;
         border-radius: 0px;
         z-index: 1000;
-        background: none;
         font-size: 30px;
-        padding-right: 10px;
         top: 0;
+        width: 50vw;
     }
 
     .scoreboard-container {
@@ -71,25 +74,19 @@
 
 
 
-    .top-btns button {
-        width: 30vw;
-        height: 10vh;
-    }
+
 
     .top-btns button:hover {
         scale: 1.05;
     }
 
     .score {
-        left: 0;
-        padding-left: 10px;
+        padding-left: 15px;
 
     }
 
     .timer {
-        width: fit-content;
-        right: 0;
-        margin-top: 0px;
+        padding-right: 100%;
     }
 
     button {
@@ -174,9 +171,8 @@
     .score {
         top: 0;
         left: 0;
-        text-align: left;
-        width: 100vw;
         margin: 0px;
+        background-color: lightseagreen;
     }
 
     .left-board-section {
@@ -197,17 +193,19 @@
 
     .hints-btns-container button {
         margin: 0px;
-        transform: translateY(110%);
+        transform: translateY(125%);
         font-size: 40px;
         padding: 0px;
         width: 30vw;
-        height: 8vh;
+        height: 6vh;
+        font-size: 30px;
         transition: 0.3s ease-in-out scale;
     }
 
     .hints-btns-container button:hover {
-        transform: translateY(60px);
-        scale: 0.9;
+        padding: 0px;
+        margin: 0px;
+        scale: 0.95;
     }
 
 }

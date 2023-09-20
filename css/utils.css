@@ -84,3 +84,11 @@ select,
 a {
     -webkit-tap-highlight-color: transparent;
 }
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
