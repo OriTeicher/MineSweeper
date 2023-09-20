@@ -19,11 +19,11 @@
 .timer {
     background-color: #ffffff3a;
     border-radius: 10px;
-    width: 150px;
     padding: 5px 0px;
     font-size: 35px;
     text-shadow: 1px 1px 1px black;
     width: 250px;
-
+    max-width: 250px;
+    height: fit-content;
     outline: 3px solid rgba(255, 255, 255, 0.493);
 }

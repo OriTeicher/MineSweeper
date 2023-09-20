@@ -5,7 +5,20 @@
     justify-content: start;
     border-radius: 15px;
     height: fit-content;
+    flex-direction: column;
 }
+
+/* .scoreboard-container .easy {
+    transform: translateY(45%);
+}
+
+.scoreboard-container .medium {
+    transform: translateY(45%);
+}
+
+.scoreboard-container .hard {
+    transform: translateY(55%);
+} */
 
 .leaderboards-header {
     background-color: #ffffff3a;

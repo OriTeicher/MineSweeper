@@ -1,6 +1,24 @@
-@media (max-width: 860px) {
+@media (max-width:1200px) {
+    .board-container table {
+        width: 400px;
+        height: 400px;
+    }
 
-    .app-container {}
+    .scoreboard-container {
+        display: none;
+    }
+}
+
+
+@media (max-width:840px) {
+    .board-container table {
+        width: 400px;
+        height: 400px;
+    }
+
+    .scoreboard-container {
+        display: none;
+    }
 
     .center-container {
         flex-direction: column-reverse;
@@ -9,10 +27,18 @@
     }
 
     .top-btns {
-        position: absolute
+        position: fixed;
+        top: 0;
+        transform: translateY(60%);
+        margin-top: 10px;
+        width: 100%;
+        justify-content: space-between;
+        gap: 0px;
     }
 
-    .center-container button {}
+    .center-container {
+        position: absolute;
+    }
 
     input[type="radio"] {
         width: 15px;
@@ -25,35 +51,45 @@
     .timer,
     .score {
         font-size: 20px;
+        position: fixed;
+        outline: none;
+        border-radius: 0px;
+        z-index: 1000;
+        background: none;
+        font-size: 30px;
+        padding-right: 10px;
+        top: 0;
     }
 
     .scoreboard-container {
         font-size: 20px;
     }
 
-
     footer {
         display: none;
     }
 
-    .score,
-    .timer {
-        top: 0;
-        position: fixed;
-        background: lightseagreen;
-        box-shadow: 1px 1px 1px black;
-        outline: none;
-        border-radius: 0px;
-        z-index: 1000;
+
+
+    .top-btns button {
+        width: 30vw;
+        height: 10vh;
+    }
+
+    .top-btns button:hover {
+        scale: 1.05;
     }
 
     .score {
         left: 0;
-        width: 50vw;
+        padding-left: 10px;
+
     }
 
     .timer {
+        width: fit-content;
         right: 0;
+        margin-top: 0px;
     }
 
     button {
@@ -69,31 +105,109 @@
     }
 
     form {
-
-        position: absolute;
+        position: fixed;
         bottom: 0;
         right: 50%;
         width: 0px;
     }
 
-    .left-board-section {}
 
     .hints-btns-container {
-        gap: 10px;
         width: 100%;
-        justify-content: space-between;
-        margin-top: 15px;
     }
 
-    .hints-btns-container button {
-        width: 150%;
-        font-size: 30px;
-
-    }
 
     label {
         font-size: 20px;
     }
 
-    .cell {}
+    .board-container {
+        position: fixed;
+    }
+
+    .board-container table {
+        position: static;
+        transform: translateY(-25px);
+    }
+
+    .cell {
+        margin: auto;
+    }
+
+    .board-container.easy table .cell {
+        width: 10vw;
+        height: auto;
+        font-size: 25px;
+    }
+
+    .cell img {
+        display: flex;
+        margin: auto;
+    }
+
+    .board-container.easy table .cell {
+        width: 46px;
+        height: 46px;
+        font-size: 30px;
+
+    }
+
+    .board-container.medium table .cell {
+        width: 33px;
+        height: 33px;
+        font-size: 25px;
+
+    }
+
+    .board-container.hard table .cell {
+        width: 25px;
+        height: 25px;
+        font-size: 15px;
+
+    }
+
+    .board-container.hard table img {
+        width: 20px;
+        height: auto;
+    }
+
+    .score {
+        top: 0;
+        left: 0;
+        text-align: left;
+        width: 100vw;
+        margin: 0px;
+    }
+
+    .left-board-section {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100vw;
+    }
+
+
+
+    .hints-btns-container {
+        position: fixed;
+        transform: translateY(-40px);
+        justify-content: space-around;
+        grid-template-columns: 80px 80px 80px;
+    }
+
+    .hints-btns-container button {
+        margin: 0px;
+        transform: translateY(110%);
+        font-size: 40px;
+        padding: 0px;
+        width: 30vw;
+        height: 8vh;
+        transition: 0.3s ease-in-out scale;
+    }
+
+    .hints-btns-container button:hover {
+        transform: translateY(60px);
+        scale: 0.9;
+    }
+
 }

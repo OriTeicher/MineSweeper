@@ -16,7 +16,7 @@
             <h1 class='logo' onclick="resetGame()" data-tooltip="Start New Game">Mine💣Sweeper</h1>
             <div class="lives"><span></span></div>
         </header>
-        <div class="board-container">
+        <div class="board-container easy">
             <section class="top-container">
                 <div class="top-btns">
                     <button class="reset-btn undo-btn" onclick="undoMove()" title="Undo move"><img
@@ -66,9 +66,9 @@
                 <table>
                     <tbody class="board" id="main-board">
                 </table>
-                <div class="right-board-section flex-col">
+                <div class="right-board-section">
                     <div class="timer">00:00:00</div>
-                    <article class="scoreboard-container flex-col">
+                    <article class="scoreboard-container ">
                         <h3 class="leaderboards-header">Leaderboards</h3>
                         <table class="scoreboard-table-container">
                             <tbody class="scoreboard-table" id="sboard">

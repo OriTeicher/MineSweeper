@@ -1,6 +1,5 @@
 .board-container {
     height: 100vh;
-    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,10 +9,26 @@
 
 .cell {
     transition: box-shadow ease-in-out 0.5s, background-color ease-in 0.2s;
-    font-size: 25px;
-    width: 35px;
-    height: 35px;
-    background: #ffffff8e
+    background: #ffffff8e;
+}
+
+.board-container.easy .cell {
+    width: 4vw;
+    height: 7.6vh;
+    font-size: 2.5em;
+}
+
+.board-container.medium .cell {
+    width: 3.5vw;
+    height: 6.5vh;
+    font-size: 2.4em;
+
+}
+
+.board-container.hard .cell {
+    width: 3vw;
+    height: 5vh;
+    font-size: 1.5em;
 }
 
 .cell:hover {
@@ -73,18 +88,15 @@
     width: 250px;
     flex-direction: column;
     justify-content: space-between;
-    gap: 20px;
     height: 100%;
 }
 
 .right-board-section {
-    display: flex;
-    width: 250px;
-    justify-content: space-between;
-    margin-bottom: 2px;
+    display: grid;
     gap: 20px;
+    justify-content: space-between;
     height: 100%;
-    ;
+
 }
 
 

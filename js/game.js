@@ -1,6 +1,5 @@
 'use strict'
 
-const LIVES = 3
 const LOST_IMG = '<img src="img/game-over.png">\n'
 const START_IMG = '<img src="img/game-start.png">\n'
 const WIN_IMG = '<img src="img/game-win.png">\n'
@@ -307,6 +306,7 @@ function resetLevel() {
             gLevel.HINTS = 3
             gLevel.LIVES = 3
             gLevel.SAFE_CLICKS = 3
+            setLevelClass('easy')
             break
         case 'medium':
             gLevel.SIZE = 9
@@ -314,18 +314,27 @@ function resetLevel() {
             gLevel.HINTS = 5
             gLevel.LIVES = 4
             gLevel.SAFE_CLICKS = 4
+            setLevelClass('medium')
             break
         case 'hard':
-            gLevel.SIZE = 12
-            gLevel.MINES = 40
+            gLevel.SIZE = 11
+            gLevel.MINES = 32
             gLevel.HINTS = 7
             gLevel.LIVES = 5
             gLevel.SAFE_CLICKS = 5
+            setLevelClass('hard')
             break;
     }
     gIsBoardManual = false;
     gIsFirstClick = true;
     gIsExterminateUsed = false;
+}
+
+function setLevelClass(level) {
+    let elCell = document.querySelector('.board-container')
+    console.log(elCell)
+    elCell.classList.remove('easy', 'medium', 'hard')
+    elCell.classList.add(`${level}`)
 }
 
 
