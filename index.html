@@ -72,6 +72,7 @@
                         <table class="scoreboard-table-container">
                             <tbody class="scoreboard-table" id="sboard">
                         </table>
+
                     </article>
                 </div>
             </section>
@@ -84,16 +85,20 @@
                 <div class="credits" style="font-family: monospace;">by Ori Teicher</div>
             </div>
         </footer>
-        <div />
-
-        <div class="error-modal hide">
+        <form class="modal score-modal " onsubmit="onSubmitScore(event)">
+            <h2>Save your score!</h2>
+            <input class="name-input" type="text" placeholder="Enter name here...">
+            <div class="flex gap-10">
+                <button type="submit">Save</button>
+                <button type="button" onclick="resetGame()">New Game</button>
+            </div>
+        </form>
+        <div class="modal error-modal hide">
             <h2>Cant use at this stage of the game</h2>
         </div>
+        <div />
 
-        <form class="socre-modal hide">
-            <input class="name-input" type="text">
-            <button type="submit" onsubmit="saveScore()"></button>
-        </form>
+
 
         <script src="https://kit.fontawesome.com/b4ce7bf6ff.js" crossorigin="anonymous"></script>
         <script src="js/storage.js"></script>

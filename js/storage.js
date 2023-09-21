@@ -9,12 +9,11 @@ var gPromptInterval
 var gScores = []
 
 // sets the best game time on screen and updates it in storage.
-function setGameTime() {
-    var pName = prompt('Enter player\'s name:')
+function setGameTime(name) {
     var elBestTime = document.querySelector('.best-time span')
     var bestTime = Math.min(gBestTime, gGame.secsPassed)
     gBestTime = bestTime
-    setLocalStorage("MinesweeperDB", (pName.length > 8) ? pName.slice(0, 8) + '..' : pName, gGame.secsPassed)
+    setLocalStorage("MinesweeperDB", (name.length > 8) ? name.slice(0, 8) + '..' : name, gGame.secsPassed)
     elBestTime.innerText = ' ' + bestTime + 's'
 }
 
@@ -61,4 +60,19 @@ function setDemoData() {
         localStorage.setItem("MinesweeperDB", JSON.stringify(demoData))
     }
     createScoreBoard()
+}
+
+function onSubmitScore(event) {
+    event.preventDefault();
+    var nameInput = document.querySelector('.name-input');
+    var playerName = nameInput.value;
+    if (playerName.trim() === "") {
+        alert("Please enter a name.");
+        return;
+    }
+    setGameTime(playerName);
+    nameInput.value = "";
+    createScoreBoard();
+    renderScoreBoard();
+    closeScoreboardModal()
 }

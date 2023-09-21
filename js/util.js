@@ -14,9 +14,26 @@ function renderCell(location, value) {
 
 function toggleErrorModal() {
     var elModal = document.querySelector('.error-modal')
-    elModal.classList.add('show')
-    setTimeout((elModal) => {
-        elModal.classList.remove('show')
+    console.log('elModal', elModal)
+    elModal.classList.toggle('show')
+    elModal.classList.toggle('hide')
+    setTimeout(() => {
+        elModal.classList.toggle('show')
+        elModal.classList.toggle('hide')
     }, 3000)
 }
+
+function openScoreboardModal() {
+    var elModal = document.querySelector('.score-modal')
+    elModal.classList.add('show')
+    elModal.classList.remove('hide')
+}
+
+function closeScoreboardModal() {
+    var elModal = document.querySelector('.score-modal')
+    elModal.classList.remove('show')
+    elModal.classList.add('hide')
+
+}
+
 

@@ -93,7 +93,6 @@
 
 .right-board-section {
     display: grid;
-    gap: 20px;
     justify-content: space-between;
     height: 100%;
 

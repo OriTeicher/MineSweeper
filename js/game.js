@@ -248,9 +248,7 @@ function checkGameOver() {
         gGame.isOn = false;
         renderPicture(WIN_IMG)
         stopTimer()
-        setGameTime();
-        createScoreBoard();
-        renderScoreBoard();
+        openScoreboardModal()
     }
     else if (gLevel.LIVES === 0) {
         gGame.isOn = false
@@ -343,6 +341,7 @@ function resetGame() {
     cleanBoard()
     stopTimer()
     resetTimer()
+    closeScoreboardModal()
     onInit()
 }
 
