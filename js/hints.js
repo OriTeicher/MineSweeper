@@ -76,6 +76,11 @@ function renderSafeClicks() {
 }
 
 function getMegaHint() {
+    console.log(gIsFirstClick)
+    if (gIsFirstClick) {
+        toggleErrorModal()
+        return
+    }
     gIsMegaHint = true;
 }
 

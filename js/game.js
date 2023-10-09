@@ -352,7 +352,7 @@ function setDifficulty(elDiffBtn) {
 }
 
 function setDarkMode() {
-    var elBody = document.querySelector('body');
+    var elBody = document.querySelector('.app-container');
     elBody.classList.toggle('dark-mode');
 }
 
