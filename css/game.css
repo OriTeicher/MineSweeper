@@ -12,13 +12,13 @@ body::-webkit-scrollbar {
 }
 
 body {
-    background: linear-gradient(to right, #155799, #159957);
     text-align: center;
     color: white;
     min-height: 100vh;
 }
 
 .app-container {
+    background: linear-gradient(to right, #155799, #159957);
     display: flex;
     justify-content: center;
     align-content: center;
@@ -203,4 +203,8 @@ button:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.dark-mode {
+    background: linear-gradient(#333, #101010);
 }

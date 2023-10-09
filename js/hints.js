@@ -92,6 +92,11 @@ function setMegaHintPos(i, j) {
     }
 }
 
+function toggleDarkMode() {
+    var elApp = document.querySelector('.app-container')
+    elApp.classList.toggle('dark-mode')
+}
+
 function displayMegaHint() {
     for (var i = gMegaHintsPoss[0].i; i <= gMegaHintsPoss[1].i; i++) {
         for (var j = gMegaHintsPoss[0].j; j <= gMegaHintsPoss[1].j; j++) {
@@ -99,7 +104,6 @@ function displayMegaHint() {
             var elCell = document.querySelector(`.cell-${i}-${j}`);
             if (cell.isMine) elCell.classList.add('mine')
             if (!cell.isMine) elCell.classList.add('mega-hint')
-
         }
     }
 

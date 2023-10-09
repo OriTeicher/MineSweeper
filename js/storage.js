@@ -1,4 +1,7 @@
 'use strict'
+
+const MINE_SWEEPER_DB = 'MinesweeperDB'
+
 var gDemoData = [
     { name: "Player1", score: 30 },
     { name: "Player2", score: 45 },
@@ -13,7 +16,7 @@ function setGameTime(name) {
     var elBestTime = document.querySelector('.best-time span')
     var bestTime = Math.min(gBestTime, gGame.secsPassed)
     gBestTime = bestTime
-    setLocalStorage("MinesweeperDB", (name.length > 8) ? name.slice(0, 8) + '..' : name, gGame.secsPassed)
+    setLocalStorage(MINE_SWEEPER_DB, (name.length > 8) ? name.slice(0, 8) + '..' : name, gGame.secsPassed)
     elBestTime.innerText = ' ' + bestTime + 's'
 }
 
@@ -25,7 +28,7 @@ function setLocalStorage(storageName, name, score) {
 }
 
 function createScoreBoard() {
-    gScores = JSON.parse(localStorage.getItem("MinesweeperDB")) || []
+    gScores = JSON.parse(localStorage.getItem(MINE_SWEEPER_DB)) || []
 }
 
 function renderScoreBoard() {
@@ -48,7 +51,7 @@ function renderScoreBoard() {
 
 
 function setDemoData() {
-    if (!localStorage.getItem("MinesweeperDB")) {
+    if (!localStorage.getItem(MINE_SWEEPER_DB)) {
         var demoData = [
             { name: "Tomer", score: 35 },
             { name: "Bruno G.", score: 124 },
@@ -56,8 +59,7 @@ function setDemoData() {
             { name: "Ronaldo", score: 57 },
             { name: "Harry", score: 66 },
         ];
-
-        localStorage.setItem("MinesweeperDB", JSON.stringify(demoData))
+        localStorage.setItem(MINE_SWEEPER_DB, JSON.stringify(demoData))
     }
     createScoreBoard()
 }
