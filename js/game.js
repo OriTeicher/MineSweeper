@@ -44,11 +44,16 @@ function onInit() {
     renderLife()
     createScoreBoard()
     renderScoreBoard();
+    hideEditModal()
     var copyBoard = copyCurrBoard(gBoard)
     gBoards.push(copyBoard);
     gLives.push(gLevel.LIVES);
 }
 
+function hideEditModal() {
+    const elModal = document.querySelector('.edit-modal')
+    elModal.classList.add('hide')
+}
 
 // returns the board size and how many mines to set in the board
 function getLevel() {
@@ -152,10 +157,14 @@ function onCellClicked(elCell, i, j) {
     console.log('currCell', currCell)
     if (currCell.isMarked) return;
     if (currCell.isShown || !gGame.isOn) return;
-    if (!currCell.isMine || currCell.isBlown) onEmptyClicked(elCell, currCell);
+    if (!currCell.isMine || currCell.isBlown) {
+        onEmptyClicked(elCell, currCell);
+        if (currCell.minesAroundCount !== 0) elCell.innerText = currCell.minesAroundCount
+    }
     else onMineClicked(currCell, i, j);
     updateScore();
     checkGameOver();
+
     var currBoardCopy = copyCurrBoard();
     gBoards.push(currBoardCopy)
     gLives.push(gLevel.LIVES);
@@ -173,7 +182,7 @@ function handleFirstClick(elCell, currCell) {
     var currBoardCopy = copyCurrBoard();
     gBoards.push(currBoardCopy)
     checkGameOver();
-    elCell.innerText = currCell.minesAroundCount
+    if (currCell.minesAroundCount !== 0) elCell.innerText = currCell.minesAroundCount
 }
 
 // when the user clicks on a regular cell expand his non mine negs
@@ -189,6 +198,14 @@ function onEmptyClicked(elCell, cell) {
 
 
 function expandShownAll(board, cell) {
+    console.log(cell)
+    if (cell.minesAroundCount > 0) {
+        const elCell = document.querySelector(`.cell-${cell.pos.i}-${cell.pos.j}`)
+        elCell.innerText = cell.minesAroundCount
+        elCell.classList.add('selected');
+        gGame.shownCount++;
+        return
+    }
     for (var i = cell.pos.i - 1; i <= cell.pos.i + 1; i++) {
         if (i < 0 || i >= board.length) continue;
         for (var j = cell.pos.j - 1; j <= cell.pos.j + 1; j++) {
@@ -337,6 +354,16 @@ function setLevelClass(level) {
     elCell.classList.add(`${level}`)
 }
 
+function displayEditModal(txt) {
+    if (!gIsBoardManual) return
+    const elModal = document.querySelector('.edit-modal')
+    const elSpan = document.querySelector('.edit-span')
+    elSpan.innerText = txt
+    elModal.classList.remove('hide')
+    setTimeout(() => {
+        elModal.classList.add('hide')
+    }, 5000);
+}
 
 function resetGame() {
     resetLevel()

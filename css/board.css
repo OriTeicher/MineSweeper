@@ -123,3 +123,7 @@ form .level-container {
 .level-container:last-child {
     border-bottom: none;
 }
+
+.manual {
+    background-color: lightpink;
+}

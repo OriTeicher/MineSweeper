@@ -122,6 +122,8 @@ function setMinesManually() {
         gIsMineSet = true
         gMines = []
     }
+    displayEditModal('on, place mines and then press the editor again to start play')
+
 }
 
 function getWantedMineSpot(i, j) {
