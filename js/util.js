@@ -20,7 +20,7 @@ function toggleErrorModal() {
     setTimeout(() => {
         elModal.classList.toggle('show')
         elModal.classList.toggle('hide')
-    }, 3000)
+    }, 1100)
 }
 
 function openScoreboardModal() {

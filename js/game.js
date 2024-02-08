@@ -149,6 +149,7 @@ function onCellClicked(elCell, i, j) {
     }
     if (gIsProcessing) return;
     if (gIsFirstClick) handleFirstClick(elCell, currCell)
+    console.log('currCell', currCell)
     if (currCell.isMarked) return;
     if (currCell.isShown || !gGame.isOn) return;
     if (!currCell.isMine || currCell.isBlown) onEmptyClicked(elCell, currCell);
@@ -172,6 +173,7 @@ function handleFirstClick(elCell, currCell) {
     var currBoardCopy = copyCurrBoard();
     gBoards.push(currBoardCopy)
     checkGameOver();
+    elCell.innerText = currCell.minesAroundCount
 }
 
 // when the user clicks on a regular cell expand his non mine negs

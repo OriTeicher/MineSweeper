@@ -76,11 +76,12 @@ function renderSafeClicks() {
 }
 
 function getMegaHint() {
-    console.log(gIsFirstClick)
     if (gIsFirstClick) {
         toggleErrorModal()
         return
     }
+    var elApp = document.querySelector('.app-container')
+    elApp.classList('mega-hint-cursor')
     gIsMegaHint = true;
 }
 
@@ -123,7 +124,5 @@ function displayMegaHint() {
         }
         gMegaHintsPoss = []
     }, 3000);
-
-
 
 }

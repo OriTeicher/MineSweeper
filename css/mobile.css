@@ -8,6 +8,15 @@
 
 
 @media (max-width:800px) {
+    body {
+        background-color: #333;
+    }
+
+    .score,
+    .timer {
+        background: #101010;
+    }
+
     .scoreboard-container {
         display: none;
     }
@@ -55,7 +64,7 @@
 
     .timer,
     .score {
-        background-color: lightseagreen;
+        background-color: #101010;
         position: fixed;
         outline: none;
         border-radius: 0px;
@@ -172,7 +181,7 @@
         top: 0;
         left: 0;
         margin: 0px;
-        background-color: lightseagreen;
+        background-color: #101010;
     }
 
     .left-board-section {
